@@ -2,8 +2,7 @@ import pandas, matplotlib.pyplot as plt
 
 # pandas.read_csv('tweets.csv', usecols=['timestamp'], index_col=0).to_csv('tweet_timestamps.csv')
 tweets_archive = pandas.DataFrame(pandas.read_csv('tweet_timestamps.csv'))
-timestamps = tweets_archive.timestamp
-timestamps = pandas.to_datetime(timestamps)
+timestamps = pandas.to_datetime(tweets_archive.timestamp)
 
 tweets_timestamps = []
 
