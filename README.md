@@ -13,3 +13,23 @@ The program produces a side by side of a bar chart and line plot representation 
 tweets_2012-2017.py   -- main program
 
 tweet_timestamps.csv  -- truncated Twitter export .csv file
+
+================================================================
+1/16
+
+changed this:
+    for ts in timestamps:
+        ts = str(ts).strip('+0000')
+        ts = ts.rsplit(' ')[0]
+        ts = ts.rsplit('-')[0]
+
+        tweets_timestamps.append(int(ts))
+
+into this:
+
+    for ts in timestamps.dt.year:
+        tweets_timestamps.append(ts)
+
+using:
+
+    timestamps = pandas.to_datetime(timestamps)
