@@ -1,6 +1,6 @@
 # tweets-over-the-years
 
-A data visualization of the amount of tweets and retweets on my twitter account since its creation using my Twitter export data
+A data visualization of the amount of tweets and retweets on my Twitter account since its creation using my Twitter export data
 
 Using a .csv file of exported Twitter data I requested from Twitter sometime two years ago, I created my first Data visualization project to simply show the amount of tweets and retweets on my account since its creation in 2012.
 
