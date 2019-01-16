@@ -18,6 +18,7 @@ tweet_timestamps.csv  -- truncated Twitter export .csv file
 1/16
 
 changed this:
+
     for ts in timestamps:
         ts = str(ts).strip('+0000')
         ts = ts.rsplit(' ')[0]
