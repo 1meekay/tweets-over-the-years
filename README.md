@@ -15,7 +15,8 @@ tweets_2012-2017.py   -- main program
 tweet_timestamps.csv  -- truncated Twitter export .csv file
 
 ================================================================
-1/16
+
+updated 1/16
 
 changed this:
 
