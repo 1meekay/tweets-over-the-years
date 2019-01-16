@@ -1,18 +1,15 @@
 import pandas, matplotlib.pyplot as plt
 
 # pandas.read_csv('tweets.csv', usecols=['timestamp'], index_col=0).to_csv('tweet_timestamps.csv')
-tweets_archive = pandas.read_csv('tweet_timestamps.csv')
-
-timestamps = tweets_archive['timestamp']
+tweets_archive = pandas.DataFrame(pandas.read_csv('tweet_timestamps.csv'))
+timestamps = tweets_archive.timestamp
 
 tweets_timestamps = []
 
-for ts in timestamps:
-    ts = str(ts).strip('+0000')
-    ts = ts.rsplit(' ')[0]
-    ts = ts.rsplit('-')[0]
+timestamps = pandas.to_datetime(timestamps)
 
-    tweets_timestamps.append(int(ts))
+for ts in timestamps.dt.year:
+    tweets_timestamps.append(ts)
 
 tweets_timestamps = list(tweets_timestamps.__reversed__())
 
