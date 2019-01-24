@@ -21,16 +21,17 @@ count2012 = tweets_timestamps.count(2012)
 tweets_count = [count2012, count2013, count2014, count2015, count2016, count2017]
 years = [2012, 2013, 2014, 2015, 2016, 2017]
 
-fig, (ax1, ax2) = plt.subplots(1, 2)
+fig, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
 ax1.plot(years, tweets_count)
-ax2.bar(years, tweets_count)
+ax2.bar(years, tweets_count, width=.45)
 
 ax1.set_title('Line Plot')
 ax1.set_xlabel('Year')
 ax1.set_ylabel('# of Tweets')
+ax1.grid()
 
 ax2.set_title('Bar Plot')
 ax2.set_xlabel('Year')
-ax2.set_ylabel('# of Tweets')
+ax2.grid()
 
 plt.show()
