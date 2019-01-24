@@ -34,4 +34,4 @@ ax2.set_title('Bar Plot')
 ax2.set_xlabel('Year')
 ax2.grid()
 
-plt.show(
+plt.show()
